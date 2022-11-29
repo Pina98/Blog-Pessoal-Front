@@ -1,9 +1,16 @@
-import React from "react";
+import { useState } from 'react';
 import './Home.css';
 
 function Home (){
+    const [num, setNum] = useState(0);
+
     return (
-        <h1>Página Home</h1>
+        <>
+        <h1> Você clicou {num} vezes </h1>
+        <button onClick={()=>setNum(num + 1)}>
+            Clique Aqui
+        </button>
+        </>
     );
 }
 
